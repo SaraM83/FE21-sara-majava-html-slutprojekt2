@@ -192,20 +192,6 @@ a:active {
     opacity: .6;
 }
 
-@media screen and (max-width: 600px) {
-    .big--flex--container {
-        flex-wrap: wrap; 
-        margin-bottom: auto;
-    }
-
-    .pics--container--one {
-        margin-bottom: .5rem;
-    }
-
-    .footer--main {
-        flex-wrap: wrap;
-    }
-}
 
 
 
@@ -218,15 +204,16 @@ a:active {
     grid-auto-flow: row;
 }
 
-@media screen and (max-width: 600px) {
-    .text--about {
-        padding-left: 2rem;
-    }
+.flex-container-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .footer--about, .footer--contact, .footer--project {
     grid-column: 1/4;
-    grid-template-rows: 3/4;
+    grid-template-rows: 4/7;
     height: 10rem;
     display: flex;
     flex-direction: row;
@@ -327,18 +314,7 @@ main {
 
 .project--grid--container {
     grid-auto-flow: row;
-
 }
-
-@media screen and (max-width: 600px) {
-    .project--grid--container {
-        grid-auto-flow: column;
-    }
-    .monticello, .monti2, .monti3, .genesis, .gen2, .gen3, .bhromaon, .bhro2, .bhro3 {
-        width: 500px;
-    }
-}
-
 
 .monticello, .genesis, .warehouse, .bhromaon, .feja {
     grid-column: 1/2;
@@ -371,4 +347,44 @@ p {
     font-size: 1em;
     color: black; 
     padding-left: 1rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    .big--flex--container {
+        flex-wrap: wrap; 
+        margin-bottom: auto;
+    }
+
+    .pics--container--one {
+        margin-bottom: .5rem;
+    }
+
+    .footer--main, .footer--project {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    .text--about {
+        padding-top: 2rem;
+    }
+
+    .sara--pic {
+        padding-left: 4rem;
+    }
+
+    .flex-container-content {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project--grid--container { 
+        grid-auto-flow: column;
+    }
+    .monticello, .monti2, .monti3, .genesis, .gen2, .gen3, .bhromaon, .bhro2, .bhro3, .warehouse2, .warehouse,.warehouse3, .feja, .feja2, .feja3 {
+        width: 100%;
+    }
 }
